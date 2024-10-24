@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakriti Health Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="vertical-carousel">
+        <div class="carousel-header">
+            <button class="icon-btn" id="settings-btn"><i class="fas fa-cog"></i></button>
+            <button class="icon-btn" id="account-btn"><i class="fas fa-user-circle"></i></button>
+            <button class="icon-btn" id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="carousel-content">
+            <div class="carousel-item">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Popular Topics</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="carousel-item">
+                <h3>Green Tip of the Day</h3>
+                <p>Using a reusable water bottle can save hundreds of plastic bottles per year!</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Disclaimer</h3>
+               <P> This chatbot offers general information and is not a substitute for professional medical advice. <br>Always consult a healthcare provider for medical concerns.</P>
+
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+    </div>
+        <div class="chatbot-container">
+            <div class="header">
+                <i class="fas fa-leaf leaf-icon"></i>
+                <h1>Prakriti Health Assistant</h1>
+                <p>Your personal wellness guide</p>
+            </div>
+                <div class="chat-container" id="chat-container">
+                </div>
+                <div class="suggested-questions" id="suggested-questions">
+                    <h3>Suggested Questions:</h3>
+                    <div class="question-buttons">
+                        <button class="suggested-btn">🍎 Tips for a balanced diet</button>
+                        <button class="suggested-btn">💤 How to improve sleep</button>
+                        <button class="suggested-btn">🏃‍♂️ Daily exercise routine</button>
+                        <button class="suggested-btn">🧘‍♀️ Stress management</button>
+                    </div>
+                </div>
+                <div class="typing-indicator" id="typing-indicator">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="Type your health query here...">
+                    <button id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <button id="voice-input-btn">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <div class="listening-animation" id="listening-animation"></div>
+                </div>
+
+                <div class="features-container">
+                    <button class="feature-btn" id="clear-chat">
+                        <i class="fas fa-broom"></i> Clear Chat
+                    </button>
+                    <!-- Voice selection dropdown -->
+                    <label for="voice-select" class="feature-label"></label>
+                    <select id="voice-select" class="feature-btn"></select>
+                    <button class="feature-btn" id="toggle-theme">
+                        <i class="fas fa-moon"></i> Toggle Theme
+                    </button>
+                </div>
+            </div>
+            <div class="video-carousel">
+                <div class="video-carousel-inner">
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1Q6ij1qSrrw?si=qqFzN1ZSta6ghunj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0yH-lS2_r1I?si=XD28j6BBP2NWyE8W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YdMCL9_UTE4?si=7O8NPJvEvD620d-2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/p3uYG17WUig?si=uTUKqLhbADVIWaf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bYXZP8eZKCw?si=02casHbWe6vr2VaD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SgPJ2JrzNBw?si=oSBbd9A9u8BqLCyp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yTQ0tBmLbns?si=iowyajY-NDGvbI5X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/i2pMEhEzbEs?si=9ws7HoyrdRBwi6cB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+
+            <script src="script.js"></script>
+</body>
+
+</html>
