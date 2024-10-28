@@ -28,3 +28,7 @@ Purpose
 
 Prakriti Health Assistant aims to make reliable health information more accessible to people who may not have the resources or skills to navigate complex digital tools or consult a professional. It empowers users with basic guidance on ayurvedic and home-based remedies for everyday health concerns.
 
+
+Access the Project
+
+Prakriti Health Assistant ChatBot https://prakriti-chatbot.netlify.app/
